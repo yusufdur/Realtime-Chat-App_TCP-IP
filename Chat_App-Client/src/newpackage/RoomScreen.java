@@ -157,7 +157,7 @@ public class RoomScreen extends javax.swing.JFrame {
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         try {
             // TODO add your handling code here:
-
+            client.appScreen.roomsForClient.remove(this);
             client.SendMessage("L" + this.name );             // client left the room
         } catch (IOException ex) {
             Logger.getLogger(RoomScreen.class.getName()).log(Level.SEVERE, null, ex);
